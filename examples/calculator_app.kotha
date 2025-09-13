@@ -1,0 +1,31 @@
+cholbe jotokkhon 1 {
+    dekhaw("Simple Calculator");
+    dekhaw("Enter first number:");
+    user er a value input new;
+    dekhaw("Enter operation (+, -, *, /):");
+    user er op value input new;
+    dekhaw("Enter second number:");
+    user er b value input new;
+
+    jodi (op == "+") {
+        dekhaw(a + b);
+    } othoba jodi (op == "-") {
+        dekhaw(a - b);
+    } othoba jodi (op == "*") {
+        dekhaw(a * b);
+    } othoba jodi (op == "/") {
+        jodi (b != 0) {
+            dekhaw(a / b);
+        } othoba {
+            dekhaw("Cannot divide by zero");
+        }
+    } othoba {
+        dekhaw("Invalid operation");
+    }
+
+    dekhaw("Continue? (1 for yes, 0 for no):");
+    user er cont value input new;
+    jodi (cont == 0) {
+        break;
+    }
+}
