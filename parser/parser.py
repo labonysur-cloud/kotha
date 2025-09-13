@@ -1,5 +1,6 @@
 import ply.yacc as yacc
 from lexer.lexer import tokens  # import tokens from your lexer
+from lexer import lexer  # import the lexer object
 
 # AST nodes
 class PrintNode:
